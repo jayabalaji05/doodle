@@ -14,11 +14,16 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.niit.suggestioncartbackend.model.BillingAddress;
+import com.niit.suggestioncartbackend.model.CardDetail;
+import com.niit.suggestioncartbackend.model.Cart;
+import com.niit.suggestioncartbackend.model.CartItem;
 import com.niit.suggestioncartbackend.model.Category;
-import com.niit.suggestioncartbackend.model.Login;
 import com.niit.suggestioncartbackend.model.Product;
-import com.niit.suggestioncartbackend.model.Register;
+import com.niit.suggestioncartbackend.model.ShippingAddress;
 import com.niit.suggestioncartbackend.model.Supplier;
+import com.niit.suggestioncartbackend.model.UserDetails;
+import com.niit.suggestioncartbackend.model.UserOrder;
 
 @Configuration
 @ComponentScan("com.niit")
@@ -54,11 +59,16 @@ public class ApplicationContextConfig {
 
 		LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
 		sessionBuilder.addProperties(getHibernateProperties());
-		sessionBuilder.addAnnotatedClass(Category.class);
-		sessionBuilder.addAnnotatedClass(Product.class);
-		sessionBuilder.addAnnotatedClass(Supplier.class);
-		sessionBuilder.addAnnotatedClass(Register.class);
-		sessionBuilder.addAnnotatedClass(Login.class);
+		 sessionBuilder.addAnnotatedClasses(Supplier.class);
+		 sessionBuilder.addAnnotatedClasses(Category.class);
+		 sessionBuilder.addAnnotatedClasses(UserDetails.class);
+	     sessionBuilder.addAnnotatedClasses(Product.class);
+	     sessionBuilder.addAnnotatedClasses(BillingAddress.class);
+	     sessionBuilder.addAnnotatedClasses(ShippingAddress.class);
+	     sessionBuilder.addAnnotatedClasses(Cart.class);
+	     sessionBuilder.addAnnotatedClasses(CardDetail.class);
+	     sessionBuilder.addAnnotatedClasses(CartItem.class);
+	     sessionBuilder.addAnnotatedClasses(UserOrder.class);
 		
 			return sessionBuilder.buildSessionFactory();
 	}

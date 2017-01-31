@@ -1,61 +1,69 @@
 package com.niit.suggestioncartfrontend.controller;
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.niit.suggestioncartbackend.dao.SupplierDAO;
 import com.niit.suggestioncartbackend.model.Supplier;
+import com.niit.suggestioncartbackend.util.Util;
 
 
 @Controller
 public class SupplierController {
-
-	@Autowired
-	SupplierDAO supplierDAO;
 	
-	@RequestMapping(value="/addsupplier",method=RequestMethod.GET)
-	public String listPersons(Model model)
+	@Autowired(required=true)
+	private SupplierDAO supplierDAO;
+	
+	@Autowired(required=true)
+	private Supplier supplier;
+	
+	
+	@RequestMapping(value="/supplier")
+	public String listsupplier(Model model)
 	{
-		model.addAttribute("supplier",new Supplier());
-		System.out.println("inside suppliercontroller");
-		
-		model.addAttribute("listSupplier",supplierDAO.listSupplier());
-		return "addsupplier";
+	model.addAttribute("supplier",supplier);
+	model.addAttribute("supplierList",this.supplierDAO.list());
+	return "supplier";
 	}
 	
-	@RequestMapping(value= "/supplier/add", method = RequestMethod.POST)
-	public String addSupplier(@Valid @ModelAttribute("supplier") Supplier supplier,BindingResult result,HttpServletRequest request)
+	
+	@RequestMapping(value="/addsupplier")
+	public String addcategory(@ModelAttribute("supplier") Supplier supplier,Model model)
 	{
-			if (supplier.getId() == 0) {
-				supplierDAO.addSupplier(supplier);
-			} else {
-				supplierDAO.updateSupplier(supplier);
-			}
+		String newid = Util.removeComma(supplier.getId());
+		supplier.setId(newid);
+	
+		supplierDAO.saveOrUpdate(supplier);
+	/*model.addAttribute("category", category);
+	model.addAttribute("categoryList", this.categoryDAO.list());*/
+	return "redirect:/supplier";
+    }
 
-			return "redirect:/addsupplier";
-		}
-
-		@RequestMapping("/removeid2/{id}")
-		public String removeSupplier(@PathVariable("id") int id)
-		{
-			supplierDAO.removeSupplier(id);
-			return "redirect:/addsupplier";
-		}
+	
+	
+	@RequestMapping("/removesupplier/{id}")
+	public String deleteSupplier(@PathVariable("id") String id, ModelMap model)
+	
+	{
+		System.out.println("delete");
+		supplierDAO.delete(id);
+		return "redirect:/supplier";
+	}
+	
+	
+	@RequestMapping("/editsupplier/{id}")
+	public String editSupplier(@PathVariable("id")String id, Model model)
+	{
+		model.addAttribute("supplier",this.supplierDAO.get(id));
+		/*model.addAttribute("category", category);*/
+		model.addAttribute("supplierList", this.supplierDAO.list());
 		
-		@RequestMapping("/editid2/{id}")
-		public String editSupplier(@PathVariable("id") int id, Model model)
-		{
-			model.addAttribute("supplier", supplierDAO.getSupplierById(id));
-	        model.addAttribute("listSupplier", supplierDAO.listSupplier());
-	        return "addsupplier";
-		}
-
+		return "supplier";
+	}
+		
 }

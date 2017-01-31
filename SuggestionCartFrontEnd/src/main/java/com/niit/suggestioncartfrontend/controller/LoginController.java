@@ -1,88 +1,139 @@
 package com.niit.suggestioncartfrontend.controller;
-
-import java.util.ArrayList;
 import java.util.Collection;
+//import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-import com.google.gson.Gson;
+
+import com.niit.suggestioncartbackend.dao.CategoryDAO;
 import com.niit.suggestioncartbackend.dao.ProductDAO;
-import com.niit.suggestioncartbackend.dao.RegisterDAO;
-import com.niit.suggestioncartbackend.model.Cart;
-import com.niit.suggestioncartbackend.model.Register;
+import com.niit.suggestioncartbackend.dao.SupplierDAO;
+import com.niit.suggestioncartbackend.dao.UserDAO;
+import com.niit.suggestioncartbackend.model.Category;
+import com.niit.suggestioncartbackend.model.Product;
+import com.niit.suggestioncartbackend.model.Supplier;
+import com.niit.suggestioncartbackend.model.UserDetails;
+
 
 
 @Controller
-public class LoginController 
-{
+public class LoginController {
+	
 	@Autowired(required=true)
-	RegisterDAO rdao;
-
+	UserDetails userDetails;
+	
 	@Autowired(required=true)
-	ProductDAO pdao;
-
-	@SuppressWarnings("unchecked")
-	@RequestMapping(value ="/loginSuccess")
-	public String login_session_attributes(HttpSession session,Model model) 
-	{
-		System.out.println("Hai");
-		String userid = SecurityContextHolder.getContext().getAuthentication().getName();
+	UserDAO userDAO;
+	
+	@Autowired
+	Category category;
+	
+	@Autowired
+	CategoryDAO categoryDAO;
+	
+	@Autowired
+	Supplier supplier;
+	
+	@Autowired
+	SupplierDAO supplierDAO;
+	
+	@Autowired
+	Product product;
+	
+	@Autowired
+	ProductDAO productDAO;
+	
+	@RequestMapping("/loginsuccess")
+	public String showMessage(@RequestParam(value="username")String name,@RequestParam(value="password")String password, 
+			HttpSession session,Model model) {
+String username = SecurityContextHolder.getContext().getAuthentication().getName();
+		
+		@SuppressWarnings("unchecked")
 		Collection<GrantedAuthority> authorities = (Collection<GrantedAuthority>) SecurityContextHolder.getContext().getAuthentication().getAuthorities();
 		String page="";
+		
 		String role="ROLE_USER";
 		for (GrantedAuthority authority:authorities) 
 		{
-			System.out.println(authority.getAuthority());
-		    if (authority.getAuthority().equals(role)) 
-		    {
-		    	session.setAttribute("UserLoggedIn", "true");
-		   		session.setAttribute("username", userid);
-		   		page="home";
-		   		ArrayList list=(ArrayList)pdao.listProduct();
-		   		Gson gson=new Gson();
-		   		String jsonInString=gson.toJson(list);
-		   		model.addAttribute("list",jsonInString);
-		   		ArrayList<Cart> cartitem=new ArrayList<Cart>();
-		   		session.setAttribute("mycart", cartitem);
-		   		break;
-		    }
-		    else 
-		    {
-		   		session.setAttribute("LoggedIn", "true");
-		   		session.setAttribute("Administrator", "true");
-		   		page="admin";
-		   		break;
-		   }
+		 System.out.println(authority.getAuthority());
+		
+		 if (authority.getAuthority().equals(role)) 
+	     {
+	    	 session.setAttribute("categoryList",categoryDAO.list());
+	    	 session.setAttribute("supplierList",supplierDAO.list());
+	    	 session.setAttribute("productList",productDAO.list());
+			 session.setAttribute("username",userDetails.getUsername());
+			 session.setAttribute("category",category);
+			 session.setAttribute("supplier",supplier);
+			 session.setAttribute("product",product);
+	         session.setAttribute("username",username);
+			 session.setAttribute("SuccessMessage","Login Successful");
+	    	 page="home";
+	    	 
+	    	 
+	    	 break;
+	     }
+	     else 
+	     {
+	  
+	    page="admin";
+	    session.setAttribute("SuccessMessage","Login Successful");
+	    	 break;
+	    }
 		}
-		return page;
-	}
-	@RequestMapping("/login")
-	public String showLogin()
-	{
-	System.out.println("login");
-	return "login";
-	}
-	@RequestMapping(value="/register",method =RequestMethod.GET)
-	public ModelAndView submitRegister(@ModelAttribute("Register")Register register) 
-	{
-		System.out.println("Register");
-		ModelAndView model=new ModelAndView("register");
-		return model; 
+		 return page;
+		}
+
+	@RequestMapping("/isValidUser")
+	public ModelAndView showMessage(@RequestParam(value = "username") String username,
+			@RequestParam(value = "password") String password) {
+		System.out.println("in controller");
+
+		String message;
+		ModelAndView mv ;
+		if (userDAO.isValidUser(username,password)) 
+		{
+			message = "Successfully Logged in";
+			 mv = new ModelAndView("product");
+		} else{
+			message="Please enter a valid username and password";
+			mv=new ModelAndView("Success");
+		}
+	
+		mv.addObject("message", message);
+		mv.addObject("username", username);
+		return mv;
 	}
 	
-	@RequestMapping(value="/register", method=RequestMethod.POST)
-	public ModelAndView Success(Register reg, Model m)
+	@RequestMapping("/Productview")
+	public ModelAndView onLoadProductView(Model model)
 	{
-		rdao.addUser(reg);
-		System.out.println("success");
-		ModelAndView model=new ModelAndView("login","register", new Register());
-		return model;
+		model.addAttribute("category", new Category());
+		model.addAttribute("categoryList", this.categoryDAO.list());
+		model.addAttribute("product", new Product());
+		model.addAttribute("productList",this.productDAO.list());
+		ModelAndView mv=new ModelAndView("Productview");
+
+		return mv;
+
+	}
+
+	@RequestMapping("/viewCustomers")
+	public ModelAndView customers()
+	{
+		ModelAndView mv = new ModelAndView("customerdetails");
+		mv.addObject("userDetails", userDetails);
+	
+		mv.addObject("ListUserDetails", userDAO.list());
+		return mv;
 	}
 }
+	
+
+

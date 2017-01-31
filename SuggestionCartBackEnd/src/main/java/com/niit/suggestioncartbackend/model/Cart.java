@@ -1,50 +1,74 @@
 package com.niit.suggestioncartbackend.model;
 
-public class Cart {
-	private String productId;
-	private String productName;
-	private int quantity=1;
-	private int price;
-	private int total;
-	public Cart(String productId, String productName, int quantity, int price, int total) {
-		super();
-		this.productId = productId;
-		this.productName = productName;
-		this.quantity = quantity;
-		this.price = price;
-		this.total = total;
+import java.io.Serializable;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
+import org.springframework.stereotype.Component;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@Component
+@Entity
+public class Cart implements Serializable  {
+	 private static final long serialVersionUID = 13L;
+
+	    @Id
+	    @GeneratedValue
+	    private int cartId;
+
+	    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	    private List<CartItem> cartItems;
+
+	    @OneToOne
+	    @JoinColumn(name = "username")
+	    @JsonIgnore
+	    private UserDetails userDetails;
+
+	   
+
+		private double grandTotal;
+
+	    public int getCartId() {
+	        return cartId;
+	    }
+
+	    public void setCartId(int cartId) {
+	        this.cartId = cartId;
+	    }
+
+	    public List<CartItem> getCartItems() {
+	        return cartItems;
+	    }
+
+	    public void setCartItems(List<CartItem> cartItems) {
+	        this.cartItems = cartItems;
+	    }
+
+	    public double getGrandTotal() {
+	        return grandTotal;
+	    }
+
+	    public void setGrandTotal(double grandTotal) {
+	        this.grandTotal = grandTotal;
+	    }
+	    
+	    public UserDetails getUserDetails() {
+			return userDetails;
+		}
+
+		public void setUserDetails(UserDetails userDetails) {
+			this.userDetails = userDetails;
+		}
 	}
-	public Cart()
-	{
-	}
-	public String getProductId() {
-		return productId;
-	}
-	public void setProductId(String productId) {
-		this.productId = productId;
-	}
-	public String getProductName() {
-		return productName;
-	}
-	public void setProductName(String productName) {
-		this.productName = productName;
-	}
-	public int getQuantity() {
-		return quantity;
-	}
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
-	public int getPrice() {
-		return price;
-	}
-	public void setPrice(int price) {
-		this.price = price;
-	}
-	public int getTotal() {
-		return total;
-	}
-	public void setTotal(int total) {
-		this.total = total;
-	}
-}
+
+
+

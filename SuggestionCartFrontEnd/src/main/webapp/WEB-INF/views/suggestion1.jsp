@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -565,13 +566,14 @@ section.all-pro{
 /* slide desk */
 #desk-slide{
 	
-    background: -moz-linear-gradient(45deg, rgba(19,70,128,1) 0%, rgba(32,84,147,1) 9%, rgba(57,111,183,1) 26%, rgba(107,164,255,1) 59%); /* ff3.6+ */
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(19,70,128,1)), color-stop(9%, rgba(32,84,147,1)), color-stop(26%, rgba(57,111,183,1)), color-stop(59%, rgba(107,164,255,1))); /* safari4+,chrome */
-    background: -webkit-linear-gradient(45deg, rgba(19,70,128,1) 0%, rgba(32,84,147,1) 9%, rgba(57,111,183,1) 26%, rgba(107,164,255,1) 59%); /* safari5.1+,chrome10+ */
-    background: -o-linear-gradient(45deg, rgba(19,70,128,1) 0%, rgba(32,84,147,1) 9%, rgba(57,111,183,1) 26%, rgba(107,164,255,1) 59%); /* opera 11.10+ */
-    background: -ms-linear-gradient(45deg, rgba(19,70,128,1) 0%, rgba(32,84,147,1) 9%, rgba(57,111,183,1) 26%, rgba(107,164,255,1) 59%); /* ie10+ */
-    background: linear-gradient(45deg, rgba(19,70,128,1) 0%, rgba(32,84,147,1) 9%, rgba(57,111,183,1) 26%, rgba(107,164,255,1) 59%); /* w3c */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6BA4FF', endColorstr='#134680',GradientType=1 ); /* ie6-9 */
+    background: rgba(255,255,255,1);
+background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)));
+background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=1 );
 }
 
 #desk-slide{
@@ -584,8 +586,8 @@ section.all-pro{
 	-moz-border-left-colors: none;
 	-moz-border-right-colors: none;
 	-moz-border-top-colors: none;
-	background-color: #8ad2ce;
-	border-color: -moz-use-text-color -moz-use-text-color #63b5b2;
+	background-color: #0B82F0;
+	border-color: #0B82F0;
 	border-image: none;
 	border-style: none none solid;
 	border-width: 0 0 2px;
@@ -594,7 +596,7 @@ section.all-pro{
 }
 
 #desk-slide h2{
-	color: #fff;
+	color: #0B82F0;
 	font-weight: 100;
 	margin-bottom: 20px;
 }
@@ -703,11 +705,11 @@ section.all-pro{
 }
 
 .desk-media:hover .wish{
-	color: #f14723;
+	color: #fff;
 }
 
 .media.desk-media:hover h3{
-	color: #fff;
+	color: #0B82F0;
 }
 
 .media.desk-media:hover .thumb-overlay .fa{
@@ -915,6 +917,14 @@ section.all-pro{
   border-bottom: 1px solid rgba(238, 238, 238, 0.8);
   padding-bottom: 10px;
 }
+.best-selling .media h4 {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 300;
+  margin-top: 8px;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.8);
+  padding-bottom: 10px;
+}
 
 .best-selling .media .btn{
 	margin-top: 10px; 
@@ -961,37 +971,37 @@ section.all-pro{
 								<div class="heading-border b-color-6"></div>
 								<ul class="media-list">
 									<li class="media">
-										<div class="media-left"><img src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\moto-z-droid-1000-BHlxH8Uhiw.png" alt=""></div>
+										<div class="media-left"><img src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\xperia-xz-hero-slideshow-01-desktop-e367bb0742824be6ae29f483136e69bc.jpg" style="width:75px;height:75px" alt=""></div>
 										<div class="media-body">
-											<p class="media-heading">Lorem ipsum dolor</p>
+											<p class="media-heading">Sony Xperia XZ Dual (Forest Blue)</p>
 											<div class="category">
 												<i class="fa fa-star"></i>
 												<i class="fa fa-star"></i> 
 												<i class="fa fa-star"></i> 
-												<i class="fa fa-star"></i> 
+												<i class="fa fa-star-o"></i> 
 												<i class="fa fa-star-o"></i>
 											</div>
-											<strong>$899.99</strong>
+											<strong>48,999 Rs</strong>
 										</div>
 									</li>
 									<li class="media">
-										<div class="media-left"><img src="images/featured-1.jpg" alt=""></div>
+										<div class="media-left"><img src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\HTC-10-7.jpg" style="width:75px;height:75px" alt=""></div>
 										<div class="media-body">
-											<p class="media-heading">Lorem ipsum dolor</p>
+											<p class="media-heading">HTC 10 64GB</p>
 											<div class="category">
 												<i class="fa fa-star"></i>
 												<i class="fa fa-star"></i> 
-												<i class="fa fa-star"></i> 
-												<i class="fa fa-star"></i> 
+												<i class="fa fa-star-o"></i> 
+												<i class="fa fa-star-o"></i> 
 												<i class="fa fa-star-o"></i>
 											</div>
-											<strong>$899.99</strong>
+											<strong>15,999 Rs</strong>
 										</div>
 									</li>
 									<li class="media">
-										<div class="media-left"><img src="images/featured-1.jpg" alt=""></div>
+										<div class="media-left"><img src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\Oppo-A53.jpg" style="width:75px;height:75px" alt=""></div>
 										<div class="media-body">
-											<p class="media-heading">Lorem ipsum dolor</p>
+											<p class="media-heading">Oppo F1S</p>
 											<div class="category">
 												<i class="fa fa-star"></i>
 												<i class="fa fa-star"></i> 
@@ -999,7 +1009,7 @@ section.all-pro{
 												<i class="fa fa-star"></i> 
 												<i class="fa fa-star-o"></i>
 											</div>
-											<strong>$899.99</strong>
+											<strong>14,000 Rs</strong>
 										</div>
 									</li>
 									
@@ -1007,9 +1017,9 @@ section.all-pro{
 							</div>
 							<div class="emarket-adds">
 							<div class="single-add">
-								<h4>Get <span>50%</span> Discount</h4>
-								<a href="#" class="btn btn-default" role="button">Learn More</a>
-								<span class="img-add"><img class="img-responsive" src="images/red-tablet.png" width="120px" alt="" /></span>
+								<h4>Get <span>10%</span> Discount</h4>
+								<a href="product_description/${product.id=2}" class="btn btn-default" role="button">Learn More</a>
+								<span class="img-add"><img class="img-responsive" src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\1482472116194068139.jpg" style="width:75px;height:75px" alt="" /></span>
 							</div>
 							</div>
 							<div class="well wedget footer-top">
@@ -1017,9 +1027,9 @@ section.all-pro{
 								<div class="heading-border b-color-6"></div>
 								<ul class="media-list">
 									<li class="media">
-										<div class="media-left"><img src="images/featured-1.jpg" alt=""></div>
+										<div class="media-left"><img src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\phone_banner.jpg" style="width:75px;height:75px" alt=""></div>
 										<div class="media-body">
-											<p class="media-heading">Lorem ipsum dolor</p>
+											<p class="media-heading">Google Pixel</p>
 											<div class="category">
 												<i class="fa fa-star"></i>
 												<i class="fa fa-star"></i> 
@@ -1027,21 +1037,21 @@ section.all-pro{
 												<i class="fa fa-star"></i> 
 												<i class="fa fa-star-o"></i>
 											</div>
-											<strong>$899.99</strong>
+											<strong>57,999 Rs</strong>
 										</div>
 									</li>
 									<li class="media">
-										<div class="media-left"><img src="images/featured-1.jpg" alt=""></div>
+										<div class="media-left"><img src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\op3.jpg" style="width:75px;height:75px" alt=""></div>
 										<div class="media-body">
-											<p class="media-heading">Lorem ipsum dolor</p>
+											<p class="media-heading">OnePlus 3</p>
 											<div class="category">
 												<i class="fa fa-star"></i>
 												<i class="fa fa-star"></i> 
 												<i class="fa fa-star"></i> 
-												<i class="fa fa-star"></i> 
+												<i class="fa fa-star-o"></i> 
 												<i class="fa fa-star-o"></i>
 											</div>
-											<strong>$899.99</strong>
+											<strong>27,999 Rs</strong>
 										</div>
 									</li>
 								</ul>
@@ -1056,22 +1066,22 @@ section.all-pro{
 										<div class="item active">
 											<div class="row">
 												<div class="col-sm-8">
-													<h2>Harry up! E-market is the Best and Perfect Solution for Online Store</h2>
-													<a class="btn btn-default" href="#">Buy Now</a>
+													<h2>We SUGGEST you to buy Mr. and Mrs. Black Mug Set</h2>
+													<a class="btn btn-default" href="product_description/${product.id=10}">View</a>
 												</div>
 												<div class="col-sm-4">
-													<img class="img-responsive" src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\moto-z-droid-1000-BHlxH8Uhiw.png" alt="" style="width:200px;height:200px"/>
+													<img class="img-responsive" src="G:\products/${product.id=10}.jpg" alt="" style="width:200px;height:200px"/>
 												</div>
 											</div>
 										</div>
 										<div class="item">
 											<div class="row">
 												<div class="col-sm-8">
-													<h2>Harry up! E-market is the Best and Perfect Solution for Online Store</h2>
-													<a class="btn btn-default" href="#">Buy Now</a>
+													<h2>We SUGGEST you to buy Test of State of the Heart Canvas</h2>
+													<a class="btn btn-default" href="product_description/${product.id=13}">View</a>
 												</div>
 												<div class="col-sm-4">
-													<img class="img-responsive" src="images/desk-slide.png" alt="" />
+													<img class="img-responsive" src="G:\products/${product.id=13}.jpg" alt="" />
 												</div>
 											</div>
 										</div>
@@ -1088,7 +1098,7 @@ section.all-pro{
 								<div class="col-sm-12">
 									<div class="row">
 										<div class="col-sm-12">
-											<h1><span class="t-color-6">Desktops</span></h1>
+											<h1><span class="t-color-6">Wedding Gifts</span></h1>
 											<div class="heading-border b-color-6"></div>
 										</div>
 									</div> <!-- section title -->
@@ -1101,14 +1111,14 @@ section.all-pro{
 							<br><br>
 							<div class="best-selling">
 								<div class="row">
+<c:forEach items="${productList}" var="product">
 									<div class="col-sm-12">
 										<div class="media desk-media">
 											<div class="media-left">
-												<img src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\moto-z-droid-1000-BHlxH8Uhiw.png" alt="" style="width:200px;height:200px">
-												<div class="thumb-overlay text-center"><i class="fa fa-eye"></i></div>
+												<img src="G:\products/${product.id}.jpg" alt="" style="width:200px;height:200px">
 											</div>
 											<div class="media-body">
-												<div class="category"> category
+												<div class="category">
 													<div class="pull-right">
 														<i class="fa fa-star"></i>
 														<i class="fa fa-star"></i>
@@ -1116,143 +1126,18 @@ section.all-pro{
 														<i class="fa fa-star"></i>
 														<i class="fa fa-star-o"></i>
 													</div>
+													<h3>${product.name}</h3>
 												</div>
-												<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-												<p>Lorem ipsum dolor sit amet dolorem molestie assentior ei, utquo eros posse verterem. Cum eu error congue saperet treer eam exerci utquo eros posse verterem error</p>
-
+												<h4>${product.view}</h4>
 												<div class="list-inline">
-													<li><strong>$899.00</strong></li>
-													<li><a href="#" class="btn btn-default" role="button">Add to Cart</a></li>
-																			</div>
+													<li><strong>${product.price} Rs</strong></li>
+													<li><a href="product_description/${product.id}" class="btn btn-default" role="button">View</a></li>
+											</div>
 											</div>
 										</div>
-										<br><br><br>
-										<div class="media desk-media">
-											<div class="media-left">
-												<img src="images/e-add-1.jpg" alt="">
-												<div class="thumb-overlay text-center"><i class="fa fa-eye"></i></div>
-											</div>
-											<div class="media-body">
-												<div class="category"> category
-													<div class="pull-right">
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star-o"></i>
-													</div>
-												</div>
-												<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-												<p>Lorem ipsum dolor sit amet dolorem molestie assentior ei, utquo eros posse verterem. Cum eu error congue saperet treer eam exerci utquo eros posse verterem error</p>
-
-												<div class="list-inline">
-													<li><strong>$899.00</strong></li>
-													<li><a href="#" class="btn btn-default" role="button">Add to Cart</a></li>
-													</div>
-											</div>
-										</div>
-										<br><br><br>
-										<div class="media desk-media">
-											<div class="media-left">
-												<img src="images/e-add-1.jpg" alt="">
-												<div class="thumb-overlay text-center"><i class="fa fa-eye"></i></div>
-											</div>
-											<div class="media-body">
-												<div class="category"> category
-													<div class="pull-right">
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star-o"></i>
-													</div>
-												</div>
-												<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-												<p>Lorem ipsum dolor sit amet dolorem molestie assentior ei, utquo eros posse verterem. Cum eu error congue saperet treer eam exerci utquo eros posse verterem error</p>
-
-												<div class="list-inline">
-													<li><strong>$899.00</strong></li>
-													<li><a href="#" class="btn btn-default" role="button">Add to Cart</a></li>
-													</div>
-											</div>
-										</div>
-										<br><br><br>
-										<div class="media desk-media">
-											<div class="media-left">
-												<img src="images/e-add-1.jpg" alt="">
-												<div class="thumb-overlay text-center"><i class="fa fa-eye"></i></div>
-											</div>
-											<div class="media-body">
-												<div class="category"> category
-													<div class="pull-right">
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star-o"></i>
-													</div>
-												</div>
-												<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-												<p>Lorem ipsum dolor sit amet dolorem molestie assentior ei, utquo eros posse verterem. Cum eu error congue saperet treer eam exerci utquo eros posse verterem error</p>
-
-												<div class="list-inline">
-													<li><strong>$899.00</strong></li>
-													<li><a href="#" class="btn btn-default" role="button">Add to Cart</a></li>
-													</div>
-											</div>
-										</div>
-										<br><br><br>
-										<div class="media desk-media">
-											<div class="media-left">
-												<img src="images/e-add-1.jpg" alt="">
-												<div class="thumb-overlay text-center"><i class="fa fa-eye"></i></div>
-											</div>
-											<div class="media-body">
-												<div class="category"> category
-													<div class="pull-right">
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star-o"></i>
-													</div>
-												</div>
-												<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-												<p>Lorem ipsum dolor sit amet dolorem molestie assentior ei, utquo eros posse verterem. Cum eu error congue saperet treer eam exerci utquo eros posse verterem error</p>
-
-												<div class="list-inline">
-													<li><strong>$899.00</strong></li>
-													<li><a href="#" class="btn btn-default" role="button">Add to Cart</a></li>
-												</div>
-											</div>
-										</div>
-										<br><br><br>
-										<div class="media desk-media">
-											<div class="media-left">
-												<img src="images/e-add-1.jpg" alt="">
-												<div class="thumb-overlay text-center"><i class="fa fa-eye"></i></div>
-											</div>
-											<div class="media-body">
-												<div class="category"> category
-													<div class="pull-right">
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star-o"></i>
-													</div>
-												</div>
-												<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-												<p>Lorem ipsum dolor sit amet dolorem molestie assentior ei, utquo eros posse verterem. Cum eu error congue saperet treer eam exerci utquo eros posse verterem error</p>
-
-												<div class="list-inline">
-													<li><strong>$899.00</strong></li>
-													<li><a href="#" class="btn btn-default" role="button">Add to Cart</a></li>
-												</div>
-											</div>
-										</div>
+										<br><br>									
 									</div>
-									
+									</c:forEach>
 								</div>
 							</div>
 						</div> <!-- slide desktop -->
@@ -1260,7 +1145,6 @@ section.all-pro{
 				</div>
 			</div>
 		</section>
-		<br>
 <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

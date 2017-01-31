@@ -1,8 +1,7 @@
 package com.niit.suggestioncartbackend.dao;
-
 import java.util.List;
-
-import org.hibernate.Session;
+import org.hibernate.Criteria;
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -12,46 +11,76 @@ import org.springframework.transaction.annotation.Transactional;
 import com.niit.suggestioncartbackend.model.Supplier;
 
 
-@Repository("SupplierDAO")
 
-@Transactional
 @EnableTransactionManagement
-
+@Repository
 public class SupplierDAOImpl implements SupplierDAO {
 	
-	@Autowired(required=true)
-	SessionFactory sessionFactory;
+	@Autowired
+	private SessionFactory sessionFactory;
+	public SupplierDAOImpl(SessionFactory sessionFactory)
+	{
+		
+		try 
+		{
+			this.sessionFactory = sessionFactory;
+		} 
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
 
-	public void addSupplier(Supplier p) {
-		// TODO Auto-generated method stub
-		Session session=sessionFactory.getCurrentSession();
-		session.persist(p);
+	@Transactional
+	public boolean delete(String id) {
+		Supplier supplier = new Supplier();
+		supplier.setId(id);
+		try {
+			sessionFactory.getCurrentSession().delete(supplier);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		return true;
+	}
+	
+@Transactional
+	public Supplier get(String id) {
+		String hql = "from Supplier where id =" + "'" + id + "'";
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		@SuppressWarnings("unchecked")
+		List<Supplier> list = (List<Supplier>) query.list();
+		if (list != null && !list.isEmpty()) {
+			return list.get(0);
+		}
+		return null;
+	}
+
+@Transactional
+	public List<Supplier> list() {
+		@SuppressWarnings("unchecked")
+		List<Supplier> list = (List<Supplier>) sessionFactory.getCurrentSession().createCriteria(Supplier.class)
+				.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
+
+		return list;
+	}
+
+@Transactional
+	public Supplier getByName(String name) {
+		String hql = "from Supplier where name =" + "'" + name + "'";
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		@SuppressWarnings("unchecked")
+		List<Supplier> list = (List<Supplier>) query.list();
+		if (list != null && !list.isEmpty()) {
+			return list.get(0);
+		}
+		return null;
+	}
+
+@Transactional
+	public void saveOrUpdate(Supplier supplier) {
+		sessionFactory.getCurrentSession().saveOrUpdate(supplier);
 		
 	}
-
-	public void updateSupplier(Supplier p) {
-		// TODO Auto-generated method stub
-		Session session=sessionFactory.getCurrentSession();
-		session.update(p);
-	}
-
-	public List<Supplier> listSupplier() {
-		Session session=sessionFactory.getCurrentSession();
-		List<Supplier> Suppliers=session.createQuery("from Supplier").getResultList();
-		return Suppliers;
-	}
-
-	public Supplier getSupplierById(int id) {
-		Session session=sessionFactory.getCurrentSession();
-		Supplier Supplier=(Supplier)session.createQuery("from Supplier where id="+id).getSingleResult();
-		return Supplier;
-	}
-
-	public void removeSupplier(int id) {
-		Session session=sessionFactory.getCurrentSession();
-		Supplier Supplier=(Supplier)session.createQuery("from Supplier where id="+id).getSingleResult();
-		session.delete(Supplier);
-		
-	}
-
 }
+

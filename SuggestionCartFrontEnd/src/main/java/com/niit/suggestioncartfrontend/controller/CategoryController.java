@@ -1,59 +1,67 @@
 package com.niit.suggestioncartfrontend.controller;
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.niit.suggestioncartbackend.dao.CategoryDAO;
 import com.niit.suggestioncartbackend.model.Category;
-
+import com.niit.suggestioncartbackend.util.Util;
 @Controller
 public class CategoryController {
-
-	@Autowired(required=true)
-	CategoryDAO categoryDAO;
 	
-	@RequestMapping(value="/addcategory",method=RequestMethod.GET)
-	public String listPersons(Model model)
+	@Autowired(required=true)
+	private CategoryDAO categoryDAO;
+	
+	@Autowired(required=true)
+	private Category category;
+	
+	
+	@RequestMapping(value="/category")
+	public String listcategory(Model model)
 	{
-		model.addAttribute("category",new Category());
-		System.out.println("inside category controller");
-		
-		model.addAttribute("listCategory",categoryDAO.listCategory());
-		return "addcategory";
+	model.addAttribute("category",category);
+	model.addAttribute("categoryList",this.categoryDAO.list());
+	return "category";
 	}
 	
-	@RequestMapping(value= "/category/add", method = RequestMethod.POST)
-	public String addCategory(@Valid @ModelAttribute("category") Category category,BindingResult result,HttpServletRequest request)
+	
+	@RequestMapping(value="/addcategory")
+	public String addcategory(@ModelAttribute("category") Category category,Model model)
 	{
-			if (category.getId() == 0) {
-				categoryDAO.addCategory(category);
-			} else {
-				categoryDAO.updateCategory(category);
-			}
+		String newid = Util.removeComma(category.getId());
+		category.setId(newid);
+	
+		categoryDAO.saveOrUpdate(category);
+	/*model.addAttribute("category", category);
+	model.addAttribute("categoryList", this.categoryDAO.list());*/
+	return "redirect:/category";
+    }
 
-			return "redirect:/addcategory";
-		}
-		@RequestMapping("/removeid/{id}")
-		public String removeCategory(@PathVariable("id") int id)
-		{
-			categoryDAO.removeCategory(id);
-			return "redirect:/addcategory";
-		}
+	
+	
+	@RequestMapping("/removecategory/{id}")
+	public String deleteCategory(@PathVariable("id") String id, ModelMap model)
+	
+	{
+		System.out.println("delete");
+		categoryDAO.delete(id);
+		return "redirect:/category";
+	}
+	
+	
+	@RequestMapping("/editcategory/{id}")
+	public String editCategory(@PathVariable("id")String id, Model model)
+	{
+		model.addAttribute("category",this.categoryDAO.get(id));
+		/*model.addAttribute("category", category);*/
+		model.addAttribute("categoryList", this.categoryDAO.list());
 		
-		@RequestMapping("/editid/{id}")
-		public String editCategory(@PathVariable("id") int id, Model model)
-		{
-			model.addAttribute("category", categoryDAO.getCategoryById(id));
-	        model.addAttribute("listCategory", categoryDAO.listCategory());
-	        return "addcategory";
-		}
-
+		return "category";
+	}
+		
 }

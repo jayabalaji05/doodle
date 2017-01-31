@@ -267,15 +267,15 @@ section{
 }
 
 .featured-product .thumbnail:hover span{
-	color: #F14723;
+	color: #0B82F0;
 }
 .featured-product .thumbnail:hover h3{
-	color: #8ad2ce;
+	color: #0B82F0;
 }
 
 .featured-product .thumbnail .btn:hover{
-	background-color: #8ad2ce;
-	border-color: #63b5b2;
+	background-color:#0B82F0;
+	border-color: #0B82F0;
 }
 
 .featured-product .thumbnail:hover .service-link .fa{
@@ -312,9 +312,9 @@ section{
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="">
-							<h1><span class="t-color-1">Best Selling</span>
+							<h1><span class="t-color-1">Best Selling Mobile Products</span>
 								<small class="btn-group hidden-xs">
-									<a href="mobile_phones" class=" btn btn-default btn-sm dropdown-toggle" aria-haspopup="true" 
+									<a href="mobile_products" class=" btn btn-default btn-sm dropdown-toggle" aria-haspopup="true" 
 									   aria-expanded="false">All Categories <i class="fa fa-bars"></i></a>
 								</small></h1>
 							<div class="heading-border b-color-1"></div>
@@ -330,103 +330,92 @@ section{
 									<div class="thumbnail">
 										<!--span class="e-label"><div>Sale</div></span-->
 										<span class="service-link text-center">
-											<img class="img-responsive" src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\moto-z-droid-1000-BHlxH8Uhiw.png" alt="" style="height:200px;width:200px">
-											<div class="list-inline">
-												<a href=""><i class="fa fa-eye"></i></a>
-												<a href=""><i class="fa fa-link"></i></a>
-											</div>
+											<img class="img-responsive" src="G:\products/${product.id=8}.jpg" alt="" style="height:200px;width:200px">
+											
 										</span>
 										<div class="caption">
-											<div class="category"> category
+											<div class="category"> Apple 
 												<div class="pull-right">
 													<i class="fa fa-star"></i>
 													<i class="fa fa-star"></i>
 													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
+													<i class="fa fa-star-o"></i>
 													<i class="fa fa-star-o"></i>
 												</div>
 											</div>
-											<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<strong>$899.00</strong>
-											<div><a href="#" class="btn btn-default" role="button">Add to Cart</a></div>
+											<h3>Apple iPhone 7 (JetBlack,4Gb RAM,128GB) </h3>
+											<strong>46,000 Rs</strong>
+											<div><a href="product_description/${product.id=8}" class="btn btn-default" role="button">View</a></div>
 										</div>
 									</div>
 								</div>
 								<div class="col-sm-3">
 									<div class="thumbnail">
-										<span class="service-link text-center">
-											<img class="img-responsive" src="images/f-pro-1.jpg" alt="">
-											<div class="list-inline">
-												<a href=""><i class="fa fa-eye"></i></a>
-												<a href=""><i class="fa fa-link"></i></a>
-											</div>
-										</span>
-										<div class="caption">
-											<div class="category"> category
-												<div class="pull-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
+												<span class="service-link text-center">
+													<img class="img-responsive" src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\1482472116194068139.jpg" style="width:200px;height:200px" alt="">
+													
+												</span>
+												<div class="caption">
+													<div class="category"> Mi 3S Prime
+														<div class="pull-right">
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star-o"></i>
+															<i class="fa fa-star-o"></i>
+														</div>
+													</div>
+													<h3>Redmi 3S Prime (Silver, 32 GB)</h3>
+													<strong>8,999 Rs</strong>
+													<div><a href="product_description/${product.id=2}" class="btn btn-default" role="button">View</a></div>
 												</div>
 											</div>
-											<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<strong>$899.00</strong>
-											<div><a href="#" class="btn btn-default" role="button">Add to Cart</a></div>
-										</div>
-									</div>
 								</div>
 								<div class="col-sm-3">
 									<div class="thumbnail">
-										<span class="service-link text-center">
-											<img class="img-responsive" src="images/f-pro-1.jpg" alt="">
-											<div class="list-inline">
-												<a href=""><i class="fa fa-eye"></i></a>
-												<a href=""><i class="fa fa-link"></i></a>
-											</div>
-										</span>
-										<div class="caption">
-											<div class="category"> category
-												<div class="pull-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
+												<span class="service-link text-center">
+													<img class="img-responsive" src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\G5-image350.jpg" style="width:200px;height:200px" alt="">
+													
+												</span>
+												<div class="caption">
+													<div class="category"> LG G5
+														<div class="pull-right">
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star-o"></i>
+														</div>
+													</div>
+													<h3>LG <br>G5 TITAN TITAN</h3>
+													<strong>34,500 Rs</strong>
+													<div>
+														<a href="product_description/${product.id=3}" class="btn btn-default" role="button">View</a></div>
 												</div>
 											</div>
-											<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<strong>$899.00</strong>
-											<div><a href="#" class="btn btn-default" role="button">Add to Cart</a></div>
-										</div>
-									</div>
 								</div>
 								<div class="col-sm-3">
 									<div class="thumbnail">
-										<span class="service-link text-center">
-											<img class="img-responsive" src="images/f-pro-1.jpg" alt="">
-											<div class="list-inline">
-												<a href=""><i class="fa fa-eye"></i></a>
-												<a href=""><i class="fa fa-link"></i></a>
-											</div>
-										</span>
-										<div class="caption">
-											<div class="category"> category
-												<div class="pull-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
+												<!--span class="e-label"><div>Sale</div></span-->
+												<span class="service-link text-center">
+													<img class="img-responsive" src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\HTC-10-7.jpg" style="width:200px;height:200px" alt="">
+													
+												</span>
+												<div class="caption">
+													<div class="category"> HTC Desire 10
+														<div class="pull-right">
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star-o"></i>
+														</div>
+													</div>
+													<h3>HTC Desire 10 Lifestyle (Polar White, 32 GB)</h3>
+													<strong>15,999 Rs</strong>
+													<div><a href="product_description/${product.id=4}" class="btn btn-default" role="button">View</a></div>
 												</div>
 											</div>
-											<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<strong>$899.00</strong>
-											<div>
-												<a href="#" class="btn btn-default" role="button">Add to Cart</a></div>
-										</div>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -434,105 +423,94 @@ section{
 							<div class="row">
 								<div class="col-sm-3">
 									<div class="thumbnail">
-										<!--span class="e-label"><div>Sale</div></span-->
-										<span class="service-link text-center">
-											<img class="img-responsive" src="images/f-pro-1.jpg" alt="">
-											<div class="list-inline">
-												<a href=""><i class="fa fa-eye"></i></a>
-												<a href=""><i class="fa fa-link"></i></a>
-											</div>
-										</span>
-										<div class="caption">
-											<div class="category"> category
-												<div class="pull-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
+												<span class="service-link text-center">
+													<img class="img-responsive" src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\op3.jpg" style="width:200px;height:200px" alt="">
+													
+												</span>
+												<div class="caption">
+													<div class="category"> OnePlus 3
+														<div class="pull-right">
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star-o"></i>
+															<i class="fa fa-star-o"></i>
+														</div>
+													</div>
+													<h3>OnePlus 3 <br>(Gun-Metal, 64 GB) </h3>
+													<strong>27,999 Rs</strong>
+													<div><a href="product_description/${product.id=5}" class="btn btn-default" role="button">View</a></div>
 												</div>
 											</div>
-											<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<strong>$899.00</strong>
-											<div><a href="#" class="btn btn-default" role="button">Add to Cart</a></div>
-										</div>
-									</div>
 								</div>
 								<div class="col-sm-3">
 									<div class="thumbnail">
-										<span class="service-link text-center">
-											<img class="img-responsive" src="images/f-pro-1.jpg" alt="">
-											<div class="list-inline">
-												<a href=""><i class="fa fa-eye"></i></a>
-												<a href=""><i class="fa fa-link"></i></a>
-											</div>
-										</span>
-										<div class="caption">
-											<div class="category"> category
-												<div class="pull-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
+												<span class="service-link text-center">
+													<img class="img-responsive" src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\Oppo-A53.jpg" style="width:200px;height:200px" alt="">
+													
+												</span>
+												<div class="caption">
+													<div class="category"> Oppo F1S
+														<div class="pull-right">
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star-o"></i>
+															<i class="fa fa-star-o"></i>
+														</div>
+													</div>
+													<h3>Oppo <br>F1S (Gold, 32GB) </h3>
+													<strong>14,000 Rs</strong>
+													<div>
+														<a href="product_description/${product.id=6}" class="btn btn-default" role="button">View</a></div>
 												</div>
 											</div>
-											<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<strong>$899.00</strong>
-											<div><a href="#" class="btn btn-default" role="button">Add to Cart</a></div>
-										</div>
-									</div>
 								</div>
 								<div class="col-sm-3">
 									<div class="thumbnail">
-										<span class="service-link text-center">
-											<img class="img-responsive" src="images/f-pro-1.jpg" alt="">
-											<div class="list-inline">
-												<a href=""><i class="fa fa-eye"></i></a>
-												<a href=""><i class="fa fa-link"></i></a>
-											</div>
-										</span>
-										<div class="caption">
-											<div class="category"> category
-												<div class="pull-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
+												<!--span class="e-label"><div>Sale</div></span-->
+												<span class="service-link text-center">
+													<img class="img-responsive" src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\phone_banner.jpg" style="width:200px;height:200px" alt="">
+													
+												</span>
+												<div class="caption">
+													<div class="category"> Google
+														<div class="pull-right">
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star-o"></i>
+														</div>
+													</div>
+													<h3>Google <br>Pixel (Very Silver, 32GB) </h3>
+													<strong>57,999 Rs</strong>
+													<div><a href="product_description/${product.id=7}" class="btn btn-default" role="button">View</a></div>
 												</div>
 											</div>
-											<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<strong>$899.00</strong>
-											<div><a href="#" class="btn btn-default" role="button">Add to Cart</a></div>
-										</div>
-									</div>
 								</div>
 								<div class="col-sm-3">
 									<div class="thumbnail">
-										<span class="service-link text-center">
-											<img class="img-responsive" src="images/f-pro-1.jpg" alt="">
-											<div class="list-inline">
-												<a href=""><i class="fa fa-eye"></i></a>
-												<a href=""><i class="fa fa-link"></i></a>
-											</div>
-										</span>
-										<div class="caption">
-											<div class="category"> category
-												<div class="pull-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
+												<span class="service-link text-center">
+													<img class="img-responsive" src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\Samsung-Galaxy-S6-Gold-Platinum.jpg" style="width:200px;height:200px" alt="">
+													
+												</span>
+												<div class="caption">
+													<div class="category">Samsung Galaxy S7
+														<div class="pull-right">
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star-o"></i>
+															<i class="fa fa-star-o"></i>
+														</div>
+													</div>
+													<h3>Samsung Galaxy S7 Edge Golden Onyx </h3>
+													<strong>55,599 Rs</strong>
+													<div>
+														<a href="product_description/${product.id=9}" class="btn btn-default" role="button">View</a></div>
 												</div>
 											</div>
-											<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<strong>$899.00</strong>
-											<div>
-												<a href="#" class="btn btn-default" role="button">Add to Cart</a></div>
-										</div>
-									</div>
 								</div>
 							</div>
 						</div>

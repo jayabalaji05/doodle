@@ -244,9 +244,9 @@ section{
 										<li><img class="" src="C:\Users\JB\workspace\shoppingFrontEnd\src\main\resources\logo\eb436d4929ba8777ab7c2ae71c22a80b-apple-inc-vector-logo.jpg" /></li>
 										<li><img class="" src="C:\Users\JB\workspace\shoppingFrontEnd\src\main\resources\logo\FreeVector-Samsung.jpg" /></li>
 										<li><img class="" src="C:\Users\JB\workspace\shoppingFrontEnd\src\main\resources\logo\motorola-logo.jpg" /></li>
-										<li><img class="" src="images/4.png" /></li>
-										<li><img class="" src="images/5.png" /></li>
-										<li><img class="" src="images/5.png" /></li>
+										<li><img class="" src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\oneplus-logo.png" /></li>
+										<li><img class="" src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\LG-Logo-face.png" /></li>
+										<li><img class="" src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\HTC-logo.png" /></li>
 										
 																			</ul>
 								</div>
@@ -256,12 +256,11 @@ section{
 							<div class="row">	
 								<div class="col-sm-12">
 									<ul class="list-inline text-center">
-										<li><img class="" src="images/1.gif" /></li>
-										<li><img class="" src="images/2.png" /></li>
-										<li><img class="" src="images/3.png" /></li>
-										<li><img class="" src="images/4.png" /></li>
-										<li><img class="" src="images/5.png" /></li>
-										<li><img class="" src="images/5.png" /></li>							
+										<li><img class="" src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\logo-xiaomi.jpg" /></li>
+										<li><img class="" src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\google_2015_logo_detail.png" /></li>
+										<li><img class="" src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\Logo Oppo.png" /></li>
+										<li><img class="" src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\lenovo_logo_detail.png" /></li>
+										<li><img class="" src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\intel_logo2.jpg" /></li>							
 										
 									</ul>
 								</div>
@@ -285,13 +284,10 @@ section{
                         
                         	<li class="widget-container widget_nav_menu"><!-- widgets list -->
                     
-                                <h1 class="title-widget">Useful links</h1>
+                                <h1 class="title-widget">About Us Links</h1>
                                 
                                 <ul>
                                 	<li><a  href="about_us"><i class="fa fa-angle-double-right"></i> About Us</a></li>
-                                    <li><a  href="contact_us"><i class="fa fa-angle-double-right"></i> Contact Us</a></li>
-                                    <li><a  href="#"><i class="fa fa-angle-double-right"></i> Success Stories</a></li>
-                                    <li><a  href="#"><i class="fa fa-angle-double-right"></i> PG Courses</a></li>
                                     </ul>
                     
 							</li>
@@ -306,19 +302,17 @@ section{
                 <div class="col-lg-3 col-md-3"><!-- widgets column left -->
             
                 <ul class="list-unstyled clear-margins"><!-- widgets -->
-                        
-                        	<li class="widget-container widget_nav_menu"><!-- widgets list -->
+                        <li class="widget-container widget_nav_menu"><!-- widgets list -->
                     
-                                <h1 class="title-widget">Useful links</h1>
+                                <h1 class="title-widget">Contact Us links</h1>
                                 
                                 <ul>
- 									<li><a  href="#"><i class="fa fa-angle-double-right"></i>  Test Series Schedule</a></li>
-                                    <li><a  href="#"><i class="fa fa-angle-double-right"></i>  Postal Coaching</a></li>
-                                    <li><a  href="#"><i class="fa fa-angle-double-right"></i>  PG Dr. Bhatia Books</a></li>
-                                    <li><a  href="#"><i class="fa fa-angle-double-right"></i>  UG Courses</a></li>
-                                    
+
+
+                <li><a href="contact_us"><i class="fa fa-angle-double-right"></i> Contact us</a></li>
+ 				
+
                                 </ul>
-                    
 							</li>
                             
                         </ul>
@@ -332,22 +326,6 @@ section{
             
                 <ul class="list-unstyled clear-margins"><!-- widgets -->
                         
-                        	<li class="widget-container widget_nav_menu"><!-- widgets list -->
-                    
-                                <h1 class="title-widget">Useful links</h1>
-                                
-                                <ul>
-
-
-                <li><a href="#"><i class="fa fa-angle-double-right"></i> Enquiry Form</a></li>
- 				<li><a href="#"><i class="fa fa-angle-double-right"></i> Online Test Series</a></li>
-				<li><a href="#"><i class="fa fa-angle-double-right"></i> Grand Tests Series</a></li>
-				<li><a href="#"><i class="fa fa-angle-double-right"></i> Subject Wise Test Series</a></li>
-				
-
-                                </ul>
-                    
-							</li>
                             
                         </ul>
                          

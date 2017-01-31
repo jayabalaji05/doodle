@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
     <head> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -255,18 +260,18 @@ input::-webkit-input-placeholder {
 	               	</div>
 	            </div> 
 				<div class="main-login main-center">
-					<form id="login-form" class="form-horizontal" action="perform_login" method="POST">
+					<form id="login-form" class="form-horizontal" action="perform_login" method="POST" role="form">
 						<div class="form-group">
-							<label for="username" class="cols-sm-2 control-label">Username</label>
+							<label for="UserName" class="cols-sm-2 control-label">Username</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="userID" id="userID"  placeholder="Enter your Username"/>
+									<input type="text" class="form-control" name="username" id="userID"  placeholder="Enter your Username"/>
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="password" class="cols-sm-2 control-label">Password</label>
+							<label for="Password" class="cols-sm-2 control-label">Password</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>

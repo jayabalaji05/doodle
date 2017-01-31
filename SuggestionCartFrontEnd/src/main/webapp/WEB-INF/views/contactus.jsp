@@ -14,7 +14,7 @@ body {
   background-size: cover;
 }
 body {
-  min-height: 3000px;
+  min-height: 1500px;
   padding-top: 23px;
   font-family: 'Open Sans', sans-serif;
 }section{
@@ -153,33 +153,7 @@ body {
 							</li>
 						</ul>
 					</div>
-					<div class="col-sm-6">
-						<h2 class="t-color-6">FeedBack</h2>
-						<div class="heading-border b-color-1"></div>
-						<div class="row form">
-							<div class="col-sm-6">
-								<div class="form-group">
-									<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name">
-								</div>
-							</div>
-							<div class="col-sm-6">
-								<div class="form-group">
-									<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-								</div>
-							</div>
-							<div class="col-sm-12">
-								<div class="form-group">
-									<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Subject">
-								</div>
-							</div>
-							<div class="col-sm-12">
-								<div class="form-group">
-									<textarea class="form-control" rows="8" placeholder="Message"></textarea>
-								</div>
-								<button class="btn btn-Primary btn-lg" type="submit">Send Message</button>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 		</section>

@@ -145,7 +145,7 @@ body {
 	font-size: 100%;
 }
 body {
-  min-height: 3000px;
+  min-height: 1500px;
   padding-top: 23px;
   font-family: 'Open Sans', sans-serif;
 }
@@ -391,7 +391,7 @@ p.tags{
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-7">
-						<img class="img-resonsive big-img" src="images/about-us.jpg" width="650" /> 
+						<img class="img-resonsive big-img" src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\wedding\online-shopping.jpg" width="650" /> 
 					</div>
 					<div class="col-sm-5">
 						<h2 class="t-color-6" style="margin-top: 0;">Some Words About Us</h2>

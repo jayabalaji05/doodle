@@ -172,7 +172,6 @@ body {
 .thumbnail {
     position: relative;
     padding: 0px;
-    margin-bottom: 20px;
 }
 
 .thumbnail img {
@@ -360,7 +359,7 @@ section{
 
 .single-add .img-add img{
 	max-width: 140px;
-	margin-bottom:-12px;
+	margin-bottom:0px;
 }
 section.home{
 	padding: 0;
@@ -531,8 +530,7 @@ section.home .intro{
 										<div class="intro-content">
 											<h1>Last Chance</h1>
 											<h2>Biggest <span class="highlight">Sale</span></h2>
-											<p>Nam apeirian assentior ei, utquo eros posse verterem. Cum eu error congue saperet. Teer eam exerci vputate consetetur.</p>
-											<a class="btn btn-default">Shop Now</a>
+											<p>Brand new Laptops with excellent Configuration and free Accessories in a very low price.</p>
 										</div>
 									</div>
 									<div class="col-sm-5"><br>
@@ -548,8 +546,7 @@ section.home .intro{
 										<div class="intro-content">
 											<h1>Last Chance</h1>
 											<h2>Biggest <span class="highlight">Sale</span></h2>
-											<p>Nam apeirian assentior ei, utquo eros posse verterem. Cum eu error congue saperet. Teer eam exerci vputate consetetur.</p>
-											<a class="btn btn-default">Shop Now</a>
+											<p>Every new Mobile phones are ready for u now! Check out our products</p>
 										</div>
 									</div>
 									<div class="col-sm-5"><br><br><br>
@@ -565,8 +562,7 @@ section.home .intro{
 										<div class="intro-content">
 											<h1>Last Chance</h1>
 											<h2>Biggest <span class="highlight">Sale</span></h2>
-											<p>Nam apeirian assentior ei, utquo eros posse verterem. Cum eu error congue saperet. Teer eam exerci vputate consetetur.</p>
-											<a class="btn btn-default">Shop Now</a>
+											<p>All new Asus with i3 bx300-2.5Ghz Intel Processor,4GB ram,1TB and Genuine Windows 10 Home edition</p>
 										</div>
 									</div>
 									<div class="col-sm-5"><br>
@@ -582,8 +578,7 @@ section.home .intro{
 										<div class="intro-content">
 											<h1>Last Chance</h1>
 											<h2>Biggest <span class="highlight">Sale</span></h2>
-											<p>Nam apeirian assentior ei, utquo eros posse verterem. Cum eu error congue saperet. Teer eam exerci vputate consetetur.</p>
-											<a class="btn btn-default">Shop Now</a>
+											<p>Samsung Curve UHD TV with stunning 2040px resolution for crystal clear blu-ray movies</p>
 										</div>
 									</div>
 									<div class="col-sm-5"><br>
@@ -599,8 +594,7 @@ section.home .intro{
 										<div class="intro-content">
 											<h1>Last Chance</h1>
 											<h2>Biggest <span class="highlight">Sale</span></h2>
-											<p>Nam apeirian assentior ei, utquo eros posse verterem. Cum eu error congue saperet. Teer eam exerci vputate consetetur.</p>
-											<a class="btn btn-default">Shop Now</a>
+											<p>Brand new PS4 with wireless control joystick and the latest blur 4.0 game will be available for every purchase.</p>
 										</div>
 									</div>
 									<div class="col-sm-5"><br>
@@ -616,8 +610,7 @@ section.home .intro{
 										<div class="intro-content">
 											<h1>Last Chance</h1>
 											<h2>Biggest <span class="highlight">Sale</span></h2>
-											<p>Nam apeirian assentior ei, utquo eros posse verterem. Cum eu error congue saperet. Teer eam exerci vputate consetetur.</p>
-											<a class="btn btn-default">Shop Now</a>
+											<p>Check out our new Microwave products with stunning offers and prices</p>
 										</div>
 									</div>
 									<div class="col-sm-5"><br>
@@ -650,44 +643,47 @@ section.home .intro{
 					</div>
         <div class="col-xs-18 col-sm-6 col-md-3">
           <div class="thumbnail">
-            <img src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\moto-z-droid-1000-BHlxH8Uhiw.png" alt="">
+            <img src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\moto-z-droid-1000-BHlxH8Uhiw.png" style="height:200px;width:200px" alt="">
               <div class="caption">
-                <h4>Thumbnail label</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-                <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
+                <h4>Moto Z</h4>
+                <p>Moto Z Play gives you exactly what you need. Moto Mods transform your mobile experience in a snap. They seamlessly attach, becoming one with your phone, turning your Moto Z Play into a movie projector</p>
+                <p><a href="mobile_products" class="btn btn-default btn-xs" role="button">Views</a></p>
             </div>
           </div>
         </div>
 
         <div class="col-xs-18 col-sm-6 col-md-3">
           <div class="thumbnail">
-            <img src="http://placehold.it/500x300" alt="">
+            <img src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\_5204153.jpg" style="width:200px;height:200px" alt="">
               <div class="caption">
-                <h4>Thumbnail label</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-                <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
+                <h4>Dell Laptop I5 inspiron</h4>
+                <p>Powered by 6th Generation Intel® Core i5-6200U Processor with Windows 10 Home Single Language & Microsoft Office Home and Student also with 8GB Dual Channel DDR3L 1600MHz (4GBx2)</p>
+                
+                <p><a href="under_construction" class="btn btn-default btn-xs" role="button">Views</a></p>
             </div>
           </div>
         </div>
 
         <div class="col-xs-18 col-sm-6 col-md-3">
           <div class="thumbnail">
-            <img src="http://placehold.it/500x300" alt="">
+            <img src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\SDL550304657_11-844f0.jpg" style="width:200px;height:200px" alt="">
               <div class="caption">
-                <h4>Thumbnail label</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-                <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
+                <h4>Microwave Ovens</h4>
+                <p>Samsung microwave oven (commonly referred to as a microwave) is a kitchen appliance that heats and cooks food by exposing it to microwave radiation in the electromagnetic spectrum</p>
+      
+                <p> <a href="under_construction" class="btn btn-default btn-xs" role="button">Views</a></p>
             </div>
           </div>
         </div>
 
         <div class="col-xs-18 col-sm-6 col-md-3">
           <div class="thumbnail">
-            <img src="http://placehold.it/500x300" alt="">
+            <img src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\2322ce80b53756997a356917583e8757.jpg" style="width:200px;height:200px" alt="">
               <div class="caption">
-                <h4>Thumbnail label</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-                <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
+                <h4>Vertical LED</h4>
+                <p>Sony LED TV is a type of LCD television that uses light-emitting diodes (LEDs) to backlight the display instead of the cold cathode fluorescent lights.</p>
+                <Br>
+                <p> <a href="under_construction" class="btn btn-default btn-xs" role="button">Views</a></p>
             </div>
           </div>
         </div>
@@ -718,23 +714,23 @@ section.home .intro{
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="single-add">
-							<h4>Get <span>50%</span> Discount</h4>
-							<a href="#" class="btn btn-default" role="button">Learn More</a>
-							<span class="img-add"><img src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\moto-z-droid-1000-BHlxH8Uhiw.png" alt="" / ></span>
+							<h4>Get <span>10%</span> Discount</h4>
+							<a href="product_description/${product.id=9}" class="btn btn-default" role="button">Learn More</a>
+							<span class="img-add"><img src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\galaxy-s6-topic.png" alt="" / ></span>
 						</div>
 					</div>
 					<div class="col-sm-4">
 						<div class="single-add">
 							<h4>Best <span>Offer</span> for You</h4>
-							<a href="#" class="btn btn-default" role="button">Learn More</a>
-							<span class="img-add"><img src="images/red-tablet.png" alt="" /></span>
+							<a href="under_construction" class="btn btn-default" role="button">Learn More</a>
+							<span class="img-add"><img src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\phone\2016_pure_aero_jr_26_face.png" alt="" /></span>
 						</div>
 					</div>
 					<div class="col-sm-4">
 						<div class="single-add">
-							<h4><span>Only</span> Best smartphone</h4>
-							<a href="#" class="btn btn-default" role="button">Learn More</a>
-							<span class="img-add"><img src="images/red-tablet.png" alt="" /></span>
+							<h4><span>Only</span> Best LED TVs</h4>
+							<a href="under_construction" class="btn btn-default" role="button">Learn More</a>
+							<span class="img-add"><img src="C:\Users\JB\workspace\SuggestionCartFrontEnd\src\main\resources\images\Samsung-SHUD-TV.png" alt="" /></span>
 						</div>
 					</div>
 				</div>

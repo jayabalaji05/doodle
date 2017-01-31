@@ -14,3 +14,5 @@ The project is created using Maven webapp.
 2. Javascript
 3. Bootstrap
 4. Java
+5.CSS
+6.AngularJS

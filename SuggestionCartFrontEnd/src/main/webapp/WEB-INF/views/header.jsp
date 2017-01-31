@@ -705,7 +705,7 @@ body {
 								<div id="menCollection" class="carousel slide" data-ride="carousel">
 									<div class="carousel-inner">
 										<div class="item active">
-											<a href="mobile_phones"><img
+											<a href="mobile_products"><img
 												src="C:\Users\JB\workspace\shoppingFrontEnd\src\main\resources\images\iphone-7-plus-silver.jpg"
 												class="img-responsive" alt="product 1" style="width:900px;height:200px"></a>
 											<h4>
@@ -741,17 +741,17 @@ body {
 								</div>
 								<!-- /.carousel -->
 								<li class="divider"></li>
-								<li><a href="mobile_phones">View all Collection <span
+								<li><a href="mobile_products">View all Collection <span
 										class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
 							</ul>
 						</li>
 						<li class="col-sm-3">
 							<ul>
 								<li class="dropdown-header">Mobile Phones</li>
-								<li><a href="mobile_phones">Apple</a></li>
-								<li><a href="mobile_phones">Samsung</a></li>
-								<li><a href="mobile_phones">Motorola</a></li>
-								<li><a href="mobile_phones">Lenovo</a></li>
+								<li><a href="mobile_products">Apple</a></li>
+								<li><a href="mobile_products">Samsung</a></li>
+								<li><a href="mobile_products">Motorola</a></li>
+								<li><a href="mobile_products">Lenovo</a></li>
 								<li class="divider"></li>
 							
 							</ul>
@@ -759,22 +759,22 @@ body {
 						<li class="col-sm-3">
 							<ul>
 								<li class="dropdown-header">Mobile Accessories</li>
-								<li><a href="#">Headsets & Headphones</a></li>
-								<li><a href="#">Powerbanks</a></li>
-								<li><a href="#">Mobile Cases</a></li>
-								<li><a href="#">Screengaurds</a></li>
+								<li><a>Headsets & Headphones</a></li>
+								<li><a>Powerbanks</a></li>
+								<li><a>Mobile Cases</a></li>
+								<li><a>Screengaurds</a></li>
 							</ul>
 						</li>
 						<li class="col-sm-3">
 							<ul>
-								<li class="dropdown-header">Wearables</li>
-								<li><a href="#">Smart Watches</a></li>
-								<li><a href="#">Smart Bands</a></li>
-								<li><a href="#">Smart Glasses(VR)</a></li>
+								<li class="dropdown-header">Laptops</li>
+								<li><a>Dell</a></li>
+								<li><a>Asus</a></li>
+								<li><a>Lenevo</a></li>
 							</ul>
 						</li>
 					</ul></li>
-				<li class="dropdown mega-dropdown"><a href="#"
+				<li class="dropdown mega-dropdown"><a
 					class="dropdown-toggle" data-toggle="dropdown">Appliances<span
 						class="caret"></span></a>
 					<ul class="dropdown-menu mega-dropdown-menu">
@@ -784,7 +784,7 @@ body {
 								<div id="menCollection" class="carousel slide" data-ride="carousel">
 									<div class="carousel-inner">
 										<div class="item active">
-											<a href="mobile_phones"><img
+											<a><img
 												src="https://images-na.ssl-images-amazon.com/images/I/71Gni5tDf9L._SL1500_.jpg"
 												class="img-responsive" alt="product 1" style="width:950px;height:200px"></a>
 											<h4>
@@ -793,7 +793,7 @@ body {
 										</div>
 										<!-- End Item -->
 										<div class="item">
-											<a href="#"><img
+											<a><img
 												src="http://www.samsung.com/uk/discover/multimedia/article_images/ces-hero-image-v1%202.jpg"
 												class="img-responsive" alt="product 2" style="width:950px;height:200px"></a>
 											<h4>
@@ -803,7 +803,7 @@ body {
 										</div>
 										<!-- End Item -->
 										<div class="item">
-											<a href=""><img
+											<a><img
 												src="http://image3.mouthshut.com/images/imagesp/925748105s.jpg"
 												class="img-responsive" alt="product 3" style="width:950px;height:200px"></a>
 											<h4>
@@ -819,17 +819,17 @@ body {
 								</div>
 								<!-- /.carousel -->
 								<li class="divider"></li>
-								<li><a href="mobile_phones">View all Collection <span
+								<li><a href="mobile_products">View all Collection <span
 										class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
 							</ul>
 						</li>
 						<li class="col-sm-3">
 							<ul>
 								<li class="dropdown-header">Television</li>
-								<li><a href="appliance_products">Sony</a></li>
-								<li><a href="appliance_products">Samsung</a></li>
-								<li><a href="appliance_products">VU</a></li>
-								<li><a href="appliance_products">Panasonic</a></li>
+								<li><a>Sony</a></li>
+								<li><a>Samsung</a></li>
+								<li><a>VU</a></li>
+								<li><a>Panasonic</a></li>
 								<li class="divider"></li>
 							
 							</ul>
@@ -837,18 +837,18 @@ body {
 						<li class="col-sm-3">
 							<ul>
 								<li class="dropdown-header">Kitchen Appliances</li>
-								<li><a href="#">Microwave Ovens</a></li>
-								<li><a href="#">Juicer</a></li>
-								<li><a href="#">Water Purifiers</a></li>
-								<li><a href="#">Coffee Makers</a></li>
+								<li><a>Microwave Ovens</a></li>
+								<li><a>Juicer</a></li>
+								<li><a>Water Purifiers</a></li>
+								<li><a>Coffee Makers</a></li>
 							</ul>
 						</li>
 						<li class="col-sm-3">
 							<ul>
 								<li class="dropdown-header">Washing Machine</li>
-								<li><a href="#">Fully Automatic Front Load</a></li>
-								<li><a href="#">Semi Automatic Top Load</a></li>
-								<li><a href="#">Fully Automatic Top Load</a></li>
+								<li><a>Fully Automatic Front Load</a></li>
+								<li><a>Semi Automatic Top Load</a></li>
+								<li><a>Fully Automatic Top Load</a></li>
 							</ul>
 						</li>
 					</ul></li>
@@ -862,7 +862,7 @@ body {
 								<div id="menCollection" class="carousel slide" data-ride="carousel">
 									<div class="carousel-inner">
 										<div class="item active">
-											<a href=""><img
+											<a><img
 												src="http://www.sonyinsider.com/wp-content/uploads/2010/10/ofy2wz.png"
 												class="img-responsive" alt="product 1" style="width:900px;height:200px"></a>
 											<h4>
@@ -872,7 +872,7 @@ body {
 										</div>
 										<!-- End Item -->
 										<div class="item">
-											<a href="#"><img
+											<a><img
 												src="https://media.playstation.com/is/image/SCEA/playstation-4-slim-vertical-product-shot-01-us-07sep16?$TwoColumn_Image$"
 												class="img-responsive" alt="product 2" style="width:900px;height:200px"></a>
 											<h4>
@@ -882,7 +882,7 @@ body {
 										</div>
 										<!-- End Item -->
 										<div class="item">
-											<a href=""><img
+											<a><img
 												src="https://s3.euronics.ee/UserFiles/Products/Images/86379_xbox-360-4gb-e-console-xbox-360-15250854-5.png"
 												class="img-responsive" alt="product 3" style="width:900px;height:200px"></a>
 											<h4>
@@ -898,17 +898,17 @@ body {
 								</div>
 								<!-- /.carousel -->
 								<li class="divider"></li>
-								<li><a href="mobile_phones">View all Collection <span
+								<li><a href="mobile_products">View all Collection <span
 										class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
 							</ul>
 						</li>
 						<li class="col-sm-3">
 							<ul>
 								<li class="dropdown-header">Sports</li>
-								<li><a href="Books&More">Cricket</a></li>
-								<li><a href="Books&More">Badminton</a></li>
-								<li><a href="Books&More">Tennis</a></li>
-								<li><a href="Books&More">Table Tennis</a></li>
+								<li><a>Cricket</a></li>
+								<li><a>Badminton</a></li>
+								<li><a>Tennis</a></li>
+								<li><a>Table Tennis</a></li>
 								<li class="divider"></li>
 							
 							</ul>
@@ -916,18 +916,18 @@ body {
 						<li class="col-sm-3">
 							<ul>
 								<li class="dropdown-header">Fitness Accessories</li>
-								<li><a href="#">Gloves</a></li>
-								<li><a href="#">AB Exercisers</a></li>
-								<li><a href="#">Yoga Mats</a></li>
-								<li><a href="#">Dumbbells</a></li>
+								<li><a>Gloves</a></li>
+								<li><a>AB Exercisers</a></li>
+								<li><a>Yoga Mats</a></li>
+								<li><a>Dumbbells</a></li>
 							</ul>
 						</li>
 						<li class="col-sm-3">
 							<ul>
 								<li class="dropdown-header">Gaming</li>
-								<li><a href="#">PS3</a></li>
-								<li><a href="#">PS4</a></li>
-								<li><a href="#">Xbox 360</a></li>
+								<li><a>PS3</a></li>
+								<li><a>PS4</a></li>
+								<li><a>Xbox 360</a></li>
 							</ul>
 						</li>
 					</ul></li>
@@ -941,7 +941,7 @@ body {
 					</a></li>
 				</c:if>
 				<c:if test="${not empty SuccessMessage}">
-					<li><a href="#">My Cart<span
+					<li><a href="cart">My Cart<span
 							class="glyphicon glyphicon-shopping-cart"></span></a></li>
 					<li><a href="logout">Logout<span
 							class="glyphicon glyphicon-log-out"></span></a></li>

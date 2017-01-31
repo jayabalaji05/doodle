@@ -1,4 +1,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"  %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <!DOCTYPE html>
 <html lang="en">
     <head> 
@@ -61,8 +63,10 @@ function email_validate(EmailId) {
 
 	if (regMail.test(EmailId) == false) {
 		document.getElementById("status").innerHTML = "<span class='warning'>Email address is not valid yet.</span>";
+		return false;
 	} else {
 		document.getElementById("status").innerHTML = "<span class='valid'>Thanks, you have entered a valid Email address!</span>";
+		return true;
 	}
 }
 function validatephone(phone) {
@@ -83,8 +87,10 @@ function checkPass() {
 	var message = document.getElementById('confirmMessage');
 	if (pass1.value == pass2.value) {
 		message.innerHTML = "Passwords Match"
+		return true;
 	} else {
 		message.innerHTML = "Passwords Do Not Match!"
+		return false;
 	}
 }
 </script>
@@ -232,69 +238,68 @@ input::-webkit-input-placeholder {
 	               	</div>
 	            </div> 
 				<div class="main-login main-center">
-				<form:form id="registerForm" class="form-horizontal" method="POST" name="register" action="register" commandName="Register">	
+				<form:form id="registerForm" class="form-horizontal" method="post" action="success" commandName="userDetails">	
 						<div class="form-group">
 							<label for="name" class="cols-sm-2 control-label">Your Name</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="Name" id="Name" placeholder="Enter your Name"/>
+									<input type="text" class="form-control" name="name" id="Name" placeholder="Enter your Name"/>
 								</div>
 							</div>
 						</div>
-
+						<c:forEach items="${flowRequestContext.messageContext.getMessagesBySource('name')}" var="err">
+					  <div><span>${err.text}</span></div>
+					</c:forEach>
 						<div class="form-group">
 							<label for="email" class="cols-sm-2 control-label">Your Email</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="EmailId" id="EmailId"  placeholder="Enter your Email" onchange="email_validate(this.value);">
+									<input type="text" class="form-control" name="email" id="EmailId"  placeholder="Enter your Email" onchange="email_validate(this.value);">
 								</div>
 								<div class="status" id="status"></div>
 							</div>
 						</div>
-
+<c:forEach items="${flowRequestContext.messageContext.getMessagesBySource('email')}" var="err">
+					  <div><span>${err.text}</span></div>
+					</c:forEach>
 						<div class="form-group">
 							<label for="username" class="cols-sm-2 control-label">Username</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="UserName"  placeholder="Enter your Username" required >
+									<input type="text" class="form-control" name="username"  placeholder="Enter your Username" required >
 								</div>
 							</div>
 						</div>
-
+<c:forEach items="${flowRequestContext.messageContext.getMessagesBySource('username')}" var="err">
+					  <div><span>${err.text}</span></div>
+					</c:forEach>
 						<div class="form-group">
 							<label for="password" class="cols-sm-2 control-label">Password</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="Password" id="Password" placeholder="Enter your Password" required data-toggle="popover" title="Password Strength" data-content="Enter Password....">
+									<input type="password" class="form-control" name="password" id="Password" placeholder="Enter your Password" required data-toggle="popover" title="Password Strength" data-content="Enter Password....">
 								</div>
 							</div>
 						</div>
-
-						<div class="form-group">
-							<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="ConfirmPassword" id="ConfrimPassword"  placeholder="Confirm your Password" required minlength="4" maxlength="16"
-									onkeyup="checkPass(); return false;" />
-								</div>
-								<div><span id="confirmMessage" class="confirmMessage"></span> </div>
-							</div>
-						</div>
+<c:forEach items="${flowRequestContext.messageContext.getMessagesBySource('password')}" var="err">
+					  <div><span>${err.text}</span></div>
+					</c:forEach>
 						<div class="form-group">
 							<label for="confirm" class="cols-sm-2 control-label">Phone Number</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-phone" aria-hidden="true"></i></span>
-									<input id="phone" class="form-control" type="text" name="ContactNo" placeholder="Phone Number" required maxlength="15" onkeyup="validatephone(this);"> 
+									<input id="phone" class="form-control" type="text" name="phone" placeholder="Phone Number" required minlength="10 "maxlength="10" onkeyup="validatephone(this);"> 
 								</div>
 							</div>
 						</div>
-
+<c:forEach items="${flowRequestContext.messageContext.getMessagesBySource('phone')}" var="err">
+					  <div><span>${err.text}</span></div>
+					</c:forEach>
 						<div class="form-group ">
 							<button type="submit" class="btn btn-primary btn-lg btn-block login-button">Register</button>
 						</div>
